@@ -49,7 +49,7 @@ for step in range(times):
         try:
             # 目标页面 url
             # url = 'http://weibo.cn/%d/profile?page=%d' % (user_id, page)
-            url = 'https://m.weibo.cn/api/container/getIndex?containerid=2304131757693565_-_WEIBO_SECOND_PROFILE_WEIBO&page_type=03&page=%d' % page
+            url = 'https://m.weibo.cn/api/container/getIndex?containerid={containerid}_-_WEIBO_SECOND_PROFILE_WEIBO&page_type=03&page=%d' % page
             cont = requests.get(url, cookies=cookie).text
             obj = json.loads(cont)
             cards = obj['data']['cards']
