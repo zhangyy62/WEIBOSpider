@@ -71,50 +71,8 @@ for step in range(times):
                         list1.append('原创')
                     
                     csv_writer.writerow(list1)
-            
-            # 获取当前url页面微博内容
-            # lxml = requests.get(url, cookies=cookie).content
-            # selector = etree.HTML(lxml)
-            # # 获取该页面微博list
-            # content = selector.xpath('//div[@class="c" and @id]')
-            # # 遍历每条微博
-            # for each in content:
-            #     list1 = []
-            #     # 获取文本内容，加入result，记录条数
-            #     zhuanfa = each.xpath('//span[@class="ctt"]')
-            #     text = each.xpath('string(.)')
-            #     list1.append(text)
-
-            #     if len(each) > 2:
-            #         nodes = each[2].xpath('a')
-            #         length = len(nodes)
-            #         list1.append(nodes[length - 4].xpath('string(.)').replace('赞[', '').replace(']', ''))
-            #         list1.append(nodes[length - 3].xpath('string(.)').replace('转发[', '').replace(']', ''))
-            #         list1.append(nodes[length - 2].xpath('string(.)').replace('评论[', '').replace(']', ''))
-            #     elif len(each) == 2:
-            #         nodes = each[1].xpath('a')
-            #         length = len(nodes)
-            #         list1.append(nodes[length - 4].xpath('string(.)').replace('赞[', '').replace(']', ''))
-            #         list1.append(nodes[length - 3].xpath('string(.)').replace('转发[', '').replace(']', ''))
-            #         list1.append(nodes[length - 2].xpath('string(.)').replace('评论[', '').replace(']', ''))
-            #     elif len(each) == 1:
-            #         nodes = each[0].xpath('a')
-            #         length = len(nodes)
-            #         list1.append(nodes[length - 4].xpath('string(.)').replace('赞[', '').replace(']', ''))
-            #         list1.append(nodes[length - 3].xpath('string(.)').replace('转发[', '').replace(']', ''))
-            #         list1.append(nodes[length - 2].xpath('string(.)').replace('评论[', '').replace(']', ''))
-
-            #     print(text, text.find('转发了'))
-            #     if text.find('转发了') > -1:
-            #         list1.append('是')
-            #     else:
-            #         list1.append('否')
-
-            #     csv_writer.writerow(list1)
-            #     list1 = []
-            #     word_count += 1
             print('第%d页微博内容爬取完完成' % (page))
-            time.sleep(3)  # 爬取每页间隔时间
+            time.sleep(3)
         except:
             print('第', page, '页发生错误')
     print('正在进行第', step + 1, '次停顿，防止访问次数过多')
