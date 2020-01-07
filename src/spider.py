@@ -28,12 +28,12 @@ pageNum = int(selector.xpath('//input[@name="mp"]')[0].attrib['value'])
 result = ""
 word_count = 1  # 爬取的微博和图片数
 image_count = 1
-
+pageNum = 140
 print('该用户微博页数 : ', pageNum)
 
 times = 5
 one_step = int(pageNum/times)
-f = open('%d.csv' % user_id, 'w', encoding='utf-8')
+f = open('%d.csv' % user_id, 'w', encoding='utf-8-sig')
 csv_writer = csv.writer(f)
 csv_writer.writerow(['内容', '赞', '转发', '评论', '是否转发'])
 
@@ -94,7 +94,7 @@ for step in range(times):
         except:
             print('第', page, '页发生错误')
 
-        time.sleep(0.01)  # 爬取每页间隔时间
+        time.sleep(0.1)  # 爬取每页间隔时间
     print('正在进行第', step + 1, '次停顿，防止访问次数过多')
     time.sleep(3)
 
