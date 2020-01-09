@@ -10,3 +10,6 @@ This is project that capture sina weibo datas
 # 第二种方式
 移动端微博的API:https://m.weibo.cn/api/container/getIndex?containerid={containerid}_-_WEIBO_SECOND_PROFILE_WEIBO&page_type=03&page={page}   
 可通过get方法请求上面的API，再将数据结构JSON反序列化一下，直接从API结果获取数据。
+
+# 导出csv
+会在根目录下导出一个user_id名称的csv文件
