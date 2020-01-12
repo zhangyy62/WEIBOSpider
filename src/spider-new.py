@@ -60,7 +60,10 @@ for step in range(times):
                     list1 = []
                     list1.append(mblog['created_at'])
                     list1.append(mblog['text'])
-                    list1.append(mblog['reads_count'])
+                    if 'reads_count' in mblog:
+                        list1.append(mblog['reads_count'])
+                    else:
+                        list1.append(0)
                     list1.append(mblog['reposts_count'])
                     list1.append(mblog['comments_count'])
                     list1.append(mblog['attitudes_count'])
@@ -81,6 +84,8 @@ for step in range(times):
 
 try:
     f.close()
+    print('微博文本内容保存成功')
+
 
 except:
     print('微博文本内容保存失败')
