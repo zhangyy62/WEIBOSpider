@@ -21,3 +21,10 @@ This is project that capture sina weibo datas
 
 # 导出csv
 会在根目录下导出一个user_id名称的csv文件
+
+
+# demo
+## userid和cookie一致
+![demo1](assets/test1.png)
+## userid和cookie不一致
+![demo2](assets/test2.png)
