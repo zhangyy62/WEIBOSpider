@@ -24,5 +24,6 @@ This is project that capture sina weibo datas
 
 # demo
 ## userid和cookie一致
-
+![demo1](https://github.com/sparkxxxxxx/WEIBOSpider/blob/master/assets/test1.png)
 ## userid和cookie不一致
+![demo2](https://github.com/sparkxxxxxx/WEIBOSpider/blob/master/assets/test2.png)
