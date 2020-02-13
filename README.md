@@ -8,6 +8,7 @@ This is project that capture sina weibo datas
 原理就是抓页面html元素来获取数据
 
 # 第二种方式
+第一种方式是抓取网页DOM中的元素，那是否有更直接的方式？当然，可以请求API并取用返回数据，而且可以获得更详细的数据。    
 移动端微博的API:https://m.weibo.cn/api/container/getIndex?containerid={containerid}_-_WEIBO_SECOND_PROFILE_WEIBO&page_type=03&page={page}   
 可通过get方法请求上面的API，再将数据结构JSON反序列化一下，直接从API结果获取数据。
 ## 阅读量数据获取
